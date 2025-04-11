@@ -30,7 +30,7 @@ if uploaded_file is not None:
 
     # Predict
     prediction = model.predict(img_array)[0][0]  # Assuming binary classification
-    label = "Fake" if prediction > 0.5 else "Real"
+    label = "Real" if prediction > 0.5 else "Fake"
 
     st.write(f"### Prediction: {label}")
     st.write(f"Confidence: {prediction:.4f}")
